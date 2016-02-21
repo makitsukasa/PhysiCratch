@@ -18,7 +18,7 @@ public class CratchPiece : MonoBehaviour {
 		CratchPiece[] cratchPieces = this.transform.parent.GetComponentsInChildren<CratchPiece>();
 		foreach( CratchPiece piece in cratchPieces )
 		{
-			if( ( piece.transform.position - this.transform.position ).magnitude < 0.05 )
+			if( ( piece.transform.position - this.transform.position ).magnitude < (float)1 / Cratch.PieceNum )
 			{
 				piece.SwitchCollider( true );
 				Debug.Log( "true" + piece.transform.position );

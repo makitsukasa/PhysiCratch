@@ -48,6 +48,8 @@
      <Compile Include="Assets\BoxyLib.cs" />
      <Compile Include="Assets\Cratch.cs" />
      <Compile Include="Assets\CratchPiece.cs" />
+     <Compile Include="Assets\Goal.cs" />
+     <Compile Include="Assets\Physi.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
