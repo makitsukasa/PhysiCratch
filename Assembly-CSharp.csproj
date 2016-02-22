@@ -45,22 +45,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BoxyLib.cs" />
-     <Compile Include="Assets\Cratch.cs" />
-     <Compile Include="Assets\CratchPiece.cs" />
-     <Compile Include="Assets\Goal.cs" />
-     <Compile Include="Assets\Physi.cs" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
+     <Compile Include="Assets\Main\BoxyLib.cs" />
+     <Compile Include="Assets\Main\Cratch\Cratch.cs" />
+     <Compile Include="Assets\Main\Cratch\CratchPiece.cs" />
+     <Compile Include="Assets\Main\Goal\Goal.cs" />
+     <Compile Include="Assets\Main\Physi\Physi.cs" />
+     <Compile Include="Assets\Title\SceneSelect.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

@@ -30,6 +30,6 @@ public class Cratch : MonoBehaviour
 	
 	void Update()
 	{
-
+		if( this.transform.position.y < -10 ) Destroy( this.gameObject );
 	}
 }
