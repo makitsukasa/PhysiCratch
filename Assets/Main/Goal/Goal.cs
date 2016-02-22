@@ -17,7 +17,7 @@ public class Goal : MonoBehaviour {
 	{
 		if( Col.transform.name == "Physi" )
 		{
-			Debug.Log( "Clear" );
+			Application.LoadLevel( "Clear" );
 		}
 	}
 

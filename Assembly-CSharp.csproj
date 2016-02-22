@@ -45,11 +45,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Clear\GoTitle.cs" />
      <Compile Include="Assets\Main\BoxyLib.cs" />
      <Compile Include="Assets\Main\Cratch\Cratch.cs" />
      <Compile Include="Assets\Main\Cratch\CratchPiece.cs" />
      <Compile Include="Assets\Main\Goal\Goal.cs" />
      <Compile Include="Assets\Main\Physi\Physi.cs" />
+     <Compile Include="Assets\Title\GoHowToPlay.cs" />
      <Compile Include="Assets\Title\SceneSelect.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
