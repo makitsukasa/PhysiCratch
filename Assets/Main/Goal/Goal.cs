@@ -17,7 +17,7 @@ public class Goal : MonoBehaviour {
 	{
 		if( Col.transform.name == "Physi" )
 		{
-			Application.LoadLevel( "Clear" );
+			UnityEngine.SceneManagement.SceneManager.LoadScene( "Clear" );
 		}
 	}
 

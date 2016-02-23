@@ -1,19 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEditor;
 
-public class SceneSelect : MonoBehaviour {
+public class SceneSelect : MonoBehaviour
+{
 
-	public InputField InputField;
+	public GameObject StageNameButton;
+	public GameObject ScrollContent;
 
-	public void OnClickButton()
+	void Start()
 	{
-		Application.LoadLevel( InputField.text );
-	}
+		foreach( var scene in UnityEditor.EditorBuildSettings.scenes )
+		{
+			string sceneName = scene.path
+				.Replace( "Assets/Scene/", "" ).Replace(".unity","");
+			if( sceneName == "Title" || 
+				sceneName == "Clear" || 
+				sceneName == "HowToPlay" ) continue;
 
-	public void EditEnd( string str )
-	{
-		Application.LoadLevel( str );
+			GameObject hoge = Instantiate(StageNameButton);
+			hoge.transform.parent = ScrollContent.transform;
+			hoge.GetComponent<Button>().SetStr( sceneName );
+
+		}
 	}
 
 }

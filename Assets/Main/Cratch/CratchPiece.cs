@@ -21,7 +21,7 @@ public class CratchPiece : MonoBehaviour {
 			if( ( piece.transform.position - this.transform.position ).magnitude < (float)1 / Cratch.PieceNum )
 			{
 				piece.SwitchCollider( true );
-				Debug.Log( "true" + piece.transform.position );
+				//Debug.Log( "true" + piece.transform.position );
 			}
 		}
 	}
@@ -58,7 +58,7 @@ public class CratchPiece : MonoBehaviour {
 		{
 			//error
 			Vector3 Pos = transform.parent.position;
-			Debug.Log( Pos.ToString() + " is already " + flag );
+			//Debug.Log( Pos.ToString() + " is already " + flag );
 		}
 	}
 	

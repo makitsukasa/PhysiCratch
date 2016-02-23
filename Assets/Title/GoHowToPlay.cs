@@ -5,7 +5,7 @@ public class GoHowToPlay : MonoBehaviour {
 
 	public void OnClickButton()
 	{
-		Application.LoadLevel( "HowToPlay" );
+		UnityEngine.SceneManagement.SceneManager.LoadScene( "HowToPlay" );
 	}
 
 }
