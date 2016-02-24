@@ -45,8 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Clear\GoTitle.cs" />
      <Compile Include="Assets\Goal\Goal.cs" />
-     <Compile Include="Assets\HowToPlay\Clear\GoTitle.cs" />
      <Compile Include="Assets\Main\BoxyLib.cs" />
      <Compile Include="Assets\Main\Cratch\Cratch.cs" />
      <Compile Include="Assets\Main\Cratch\CratchPiece.cs" />

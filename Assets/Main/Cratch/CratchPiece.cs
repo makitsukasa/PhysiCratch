@@ -18,7 +18,9 @@ public class CratchPiece : MonoBehaviour {
 		CratchPiece[] cratchPieces = this.transform.parent.GetComponentsInChildren<CratchPiece>();
 		foreach( CratchPiece piece in cratchPieces )
 		{
-			if( ( piece.transform.position - this.transform.position ).magnitude < (float)1 / Cratch.PieceNum )
+			//消えた奴に隣接してた4つはcollider ON
+			// sqrt(1) < 1.1 < sqrt(2)
+			if( ( piece.transform.position - this.transform.position ).magnitude < 1.1f / Cratch.PieceNum )
 			{
 				piece.SwitchCollider( true );
 				//Debug.Log( "true" + piece.transform.position );
@@ -46,7 +48,7 @@ public class CratchPiece : MonoBehaviour {
 		{
 			//create
 			GameObject hoge = Instantiate( BoxCollider_GameObject, 
-				this.transform.position, Quaternion.identity ) as GameObject;
+				this.transform.position, this.transform.rotation ) as GameObject;
 			hoge.transform.SetParent( this.transform );
 		}
 		else if( !flag && transform.Find( "BoxCollider2D" ) != null )

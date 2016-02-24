@@ -9,15 +9,18 @@ public class Cratch : MonoBehaviour
 
 	void Start()
 	{
+
 		for( var x = -( PieceNum / 2 ); x <= ( PieceNum / 2 ); x++ )
 		{
 			for( var y = -( PieceNum / 2 ); y <= ( PieceNum / 2 ); y++ )
 			{
+				Quaternion rota = this.transform.rotation;
 				Vector3 pos = new Vector3( x * ( (float)1 / PieceNum ), y * ( (float)1 / PieceNum ) );
-				pos += this.transform.position;
-				Quaternion rota = Quaternion.identity;
+				pos = rota * pos;
+                pos += this.transform.position;
 				GameObject piyo = Instantiate( Sprite_GameObject, pos, rota ) as GameObject;
 				piyo.transform.SetParent( this.transform );
+				//border : collider ON
 				if( x == -( PieceNum / 2 ) || x == ( PieceNum / 2 ) ||
 					y == -( PieceNum / 2 ) || y == ( PieceNum / 2 ) )
 				{
@@ -30,6 +33,10 @@ public class Cratch : MonoBehaviour
 	
 	void Update()
 	{
+		Debug.Log( ( this.transform.rotation.x * Mathf.PI ).ToString() + "," +
+			( this.transform.rotation.y * Mathf.PI ).ToString() + "," +
+			( this.transform.rotation.z * Mathf.PI ).ToString() + "," +
+			( this.transform.rotation.w * Mathf.PI ).ToString() );
 		if( this.transform.position.y < -10 ) Destroy( this.gameObject );
 	}
 }

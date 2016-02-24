@@ -12,10 +12,10 @@ public class SceneSelect : MonoBehaviour
 
 	void Start()
 	{
-		foreach( var scene in UnityEditor.EditorBuildSettings.scenes )
+		foreach( var scene in EditorBuildSettings.scenes )
 		{
-			string sceneName = scene.path
-				.Replace( "Assets/Scene/", "" ).Replace(".unity","");
+			string sceneName = 
+				scene.path.Replace( "Assets/Scene/", "" ).Replace(".unity","");
 			if( sceneName == "Title" || 
 				sceneName == "Clear" || 
 				sceneName == "HowToPlay" ) continue;
