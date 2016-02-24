@@ -22,7 +22,7 @@ public class SceneSelect : MonoBehaviour
 
 			GameObject hoge = Instantiate(StageNameButton);
 			hoge.transform.parent = ScrollContent.transform;
-			hoge.GetComponent<Button>().SetStr( sceneName );
+			hoge.GetComponent<StageSelectButton>().SetStr( sceneName );
 
 		}
 	}
