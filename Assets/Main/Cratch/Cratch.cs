@@ -33,10 +33,10 @@ public class Cratch : MonoBehaviour
 	
 	void Update()
 	{
-		Debug.Log( ( this.transform.rotation.x * Mathf.PI ).ToString() + "," +
+		/*Debug.Log( ( this.transform.rotation.x * Mathf.PI ).ToString() + "," +
 			( this.transform.rotation.y * Mathf.PI ).ToString() + "," +
 			( this.transform.rotation.z * Mathf.PI ).ToString() + "," +
-			( this.transform.rotation.w * Mathf.PI ).ToString() );
+			( this.transform.rotation.w * Mathf.PI ).ToString() );*/
 		if( this.transform.position.y < -10 ) Destroy( this.gameObject );
 	}
 }

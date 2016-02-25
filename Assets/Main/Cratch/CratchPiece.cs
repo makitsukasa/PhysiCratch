@@ -5,7 +5,7 @@ using BoxyLib;
 public class CratchPiece : MonoBehaviour {
 
 	public /*const*/ GameObject BoxCollider_GameObject;
-	private const float TouchRadius = 0.02f;
+	private const float TouchRadius = 0.05f;
 
 	void Start () {
 		
