@@ -55,6 +55,7 @@
      <Compile Include="Assets\Title\GoHowToPlay.cs" />
      <Compile Include="Assets\Title\SceneSelect.cs" />
      <Compile Include="Assets\Title\StageSelectButton.cs" />
+     <Compile Include="Assets\Title\TitleManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

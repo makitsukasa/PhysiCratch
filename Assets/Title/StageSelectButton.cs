@@ -9,7 +9,8 @@ public class StageSelectButton : MonoBehaviour {
 	public void SetStr(string str)
 	{
 		sceneName = str;
-		this.transform.Find( "Text" ).GetComponent<Text>().text = str;
+		this.transform.Find( "Button" ).Find( "Text" )
+			.GetComponent<Text>().text = str;
 	}
 
 	public void OnClickButton()
