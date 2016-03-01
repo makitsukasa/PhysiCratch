@@ -20,7 +20,8 @@ public class CratchPiece : MonoBehaviour {
 		{
 			//消えた奴に隣接してた4つはcollider ON
 			// sqrt(1) < 1.1 < sqrt(2)
-			if( ( piece.transform.position - this.transform.position ).magnitude < 1.1f / Cratch.PieceNum )
+			//Debug.Log( ( piece.transform.position - this.transform.position ).magnitude );
+			if( ( piece.transform.position - this.transform.position ).magnitude < 1.1f / Cratch.Side_PieceNum )
 			{
 				piece.SwitchCollider( true );
 				//Debug.Log( "true" + piece.transform.position );
@@ -47,9 +48,10 @@ public class CratchPiece : MonoBehaviour {
 		if( flag && transform.Find( "BoxCollider2D" ) == null )
 		{
 			//create
-			GameObject hoge = Instantiate( BoxCollider_GameObject, 
+			GameObject col = Instantiate( BoxCollider_GameObject, 
 				this.transform.position, this.transform.rotation ) as GameObject;
-			hoge.transform.SetParent( this.transform );
+			col.transform.SetParent( this.transform );
+			col.transform.localScale = new Vector3( 1, 1, 0 );
 		}
 		else if( !flag && transform.Find( "BoxCollider2D" ) != null )
 		{
