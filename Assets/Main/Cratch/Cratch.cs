@@ -21,14 +21,15 @@ public class Cratch : MonoBehaviour
 				pos += new Vector3( 0.5f / Side_PieceNum - 0.5f, 0.5f / Side_PieceNum - 0.5f );
 				pos = rota * pos; //Quaternion * Vector3 : Rotation of the vector
                 pos += this.transform.position;
-				GameObject piyo = Instantiate( Sprite_GameObject, pos, rota ) as GameObject;
-				piyo.transform.localScale = new Vector3( PieceSize, PieceSize );
-				piyo.transform.SetParent( this.transform );
+
+				GameObject sprite = Instantiate( Sprite_GameObject, pos, rota ) as GameObject;
+				sprite.transform.localScale = new Vector3( PieceSize, PieceSize );
+				sprite.transform.SetParent( this.transform );
 				//border : collider ON
 				if( x == 0 || x == ( Side_PieceNum - 1 ) ||
 					y == 0 || y == ( Side_PieceNum - 1 ) )
 				{
-					piyo.GetComponent<CratchPiece>().SwitchCollider( true );
+					sprite.GetComponent<CratchPiece>().SwitchCollider( true );
 				}
 			}
 
