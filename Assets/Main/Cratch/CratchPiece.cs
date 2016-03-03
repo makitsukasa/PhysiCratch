@@ -2,13 +2,15 @@
 using System.Collections;
 using BoxyLib;
 
-public class CratchPiece : MonoBehaviour {
+public class CratchPiece : MonoBehaviour
+{
 
 	public /*const*/ GameObject BoxCollider_GameObject;
 	private const float TouchRadius = 0.05f;
 
-	void Start () {
-		
+	void Start()
+	{
+
 	}
 
 	private void OnTouch()
@@ -47,11 +49,12 @@ public class CratchPiece : MonoBehaviour {
 	{
 		if( flag && transform.Find( "BoxCollider2D" ) == null )
 		{
-			//create
-			GameObject col = Instantiate( BoxCollider_GameObject, 
-				this.transform.position, this.transform.rotation ) as GameObject;
+			// create Collision
+			GameObject col = Instantiate( BoxCollider_GameObject,
+					this.transform.position, this.transform.rotation ) as GameObject;
 			col.transform.SetParent( this.transform );
 			col.transform.localScale = new Vector3( 1, 1, 0 );
+
 		}
 		else if( !flag && transform.Find( "BoxCollider2D" ) != null )
 		{
@@ -61,12 +64,13 @@ public class CratchPiece : MonoBehaviour {
 		else
 		{
 			//error
-			Vector3 Pos = transform.parent.position;
+			//Vector3 Pos = transform.parent.position;
 			//Debug.Log( Pos.ToString() + " is already " + flag );
 		}
 	}
-	
-	void Update () {
+
+	void Update()
+	{
 
 		Vector3 touchPos = TouchUtil.GetTouchWorldPosition();
 		touchPos.z = 0;

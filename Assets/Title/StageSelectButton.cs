@@ -5,6 +5,11 @@ using UnityEngine.UI;
 public class StageSelectButton : MonoBehaviour {
 
 	private string sceneName;
+
+	void Start()
+	{
+		this.gameObject.transform.localScale = new Vector3( 1, 1, 1 );
+	}
 	
 	public void SetStr(string str)
 	{
